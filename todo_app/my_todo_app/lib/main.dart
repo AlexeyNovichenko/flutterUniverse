@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           //Creating a file for the following Container and this container is 
           //now available in ProductManager class i.e. product_manager.dart
-          child: ProductManager()
+          child: ProductManager("Food item")
           //This content is now moved to Products.dart    
         ),
       ),
