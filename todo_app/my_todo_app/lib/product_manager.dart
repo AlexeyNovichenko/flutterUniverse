@@ -31,6 +31,7 @@ class _ProjectManagerState extends State<ProductManager> {
             Container(
               margin: EdgeInsets.all(10.0),
               child: RaisedButton(
+                color: Theme.of(context).primaryColor,
                 onPressed: () {
                   setState(() {
                     _product.add("New food item");
@@ -38,7 +39,6 @@ class _ProjectManagerState extends State<ProductManager> {
                   });
                 },
               child: Text("Add Product"),
-              splashColor: Color.fromRGBO(52, 72, 85, 1),
             ),
           ),
 

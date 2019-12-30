@@ -10,10 +10,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primarySwatch: Colors.deepOrange,
+        accentColor: Colors.deepPurple
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: Text("Todo List App"),
-          backgroundColor: Color.fromRGBO(52, 72, 85, 1),
         ),
         body: SafeArea(
           //Creating a file for the following Container and this container is 
