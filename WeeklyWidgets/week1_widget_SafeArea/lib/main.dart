@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
 							padding: const EdgeInsets.all(16.0),
 							child: Text(
 								"The SafeArea widget is helpful to show the content" +
-										"on the screen with hiding any text due to notches or curved screen." +
-										"So SafeArea widget helps to show content in the relevant area and keep content intact on screen.",
+										" on the screen with hiding any text due to notches or curved screen." +
+										" SafeArea widget helps to show content in the relevant area and keep content intact on screen.",
 								style: TextStyle(fontSize: 24.0, color: Colors.white),
 							),
 						),
