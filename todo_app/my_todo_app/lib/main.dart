@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
           //Creating a file for the following Container and this container is 
           //now available in ProductManager class i.e. product_manager.dart
           child: ProductManager("Food item")
+          //child: ProductManager()
           //This content is now moved to Products.dart    
         ),
       ),
