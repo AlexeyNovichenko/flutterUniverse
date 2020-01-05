@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         // ),
         body: SafeArea( 
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -45,6 +46,13 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold
                 ),
               ),
+              SizedBox(
+                width: 150.0,
+                height: 20.0,
+                child: Divider(
+                  color: Colors.teal[50],
+                )
+              ),
               Card(
                 color: Colors.white,
                 //Use margin to add space from other widgets (space outside Container)
@@ -54,52 +62,37 @@ class MyApp extends StatelessWidget {
                 //Adding a container bought the entire content in the center of the screen as Container widget
                 // with no child occupies the maximum space.
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone,
-                        color: Colors.teal
+                  padding: const EdgeInsets.all(.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    title: Text("+91 810 990 9271",
+                      style: TextStyle(
+                        color: Colors.teal,
+                        fontFamily: "Source Sans Pro",
+                        fontSize: 20.0,
                       ),
-                      SizedBox(
-                        width: 20.0,
-                      ),
-                      Text(
-                        "+91 810 990 9272",
-                        style: TextStyle(
-                          color: Colors.teal,
-                          fontFamily: "Source Sans Pro",
-                          fontSize: 20.0,
-                        )
-                      ),
-                    ],
-                  ),
+                    ),
+                  )
                 ), 
               ),
               Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 //padding: EdgeInsets.all(10.0),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.email,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        width: 20.0,
-                      ),
-                      Text(
-                        "krishnatandon.1208@gmail.com",
-                        style: TextStyle(
-                          fontFamily: "Source Sans Pro",
-                          fontSize: 20.0,
-                          color: Colors.teal,
-                        ),
-                      ),
-                    ],
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: const Text("krishnatandon.1208@gmail.com",
+                    style: TextStyle(
+                      color: Colors.teal,
+                      fontFamily: "Source Sans Pro",
+                      fontSize: 20.0
+                    ),
                   ),
                 )
               ),
