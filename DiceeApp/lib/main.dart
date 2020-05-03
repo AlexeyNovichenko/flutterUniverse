@@ -9,16 +9,16 @@ void main() {
       title: Text("Dicee App"),
       backgroundColor: Colors.indigo[400],
     ),
-    body: DicePage(),
+    body: MyApp(),
   )));
 }
 
-class DicePage extends StatefulWidget {
+class MyApp extends StatefulWidget {
   @override
-  _DicePageState createState() => _DicePageState();
+  _MyAppState createState() => _MyAppState();
 }
 
-class _DicePageState extends State<DicePage> {
+class _MyAppState extends State<MyApp> {
   int leftDiceNumber = 1;
   int rightDiceNumber = 1;
   String winningText = "you won";
