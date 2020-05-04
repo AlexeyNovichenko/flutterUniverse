@@ -4,8 +4,8 @@ import "package:flutter/material.dart";
 void main() {
   runApp(MaterialApp(
       home: Scaffold(
-    backgroundColor: Colors.indigo[900],
-    appBar: AppBar(
+      backgroundColor: Colors.indigo[900],
+      appBar: AppBar(
       title: Text("Dicee App"),
       backgroundColor: Colors.indigo[400],
     ),

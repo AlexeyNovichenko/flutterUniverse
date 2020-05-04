@@ -1,4 +1,3 @@
-import "dart:math";
 import "package:flutter/material.dart";
 
 void main() {
@@ -35,14 +34,11 @@ class _MyAppState extends State<MyApp> {
                 //Hence, call the setState(() {}); method and inside this method, place the code that
                 // will change.
                 setState(() {
-                  leftDiceNumber = Random().nextInt(6) + 1;
-                  rightDiceNumber = Random().nextInt(6) + 1;
                   // if(leftDiceNumber == rightDiceNumber) {
                   //   winningText = "You Won";
                   // }
                 });
               },
-              child: Image.asset("images/dice$leftDiceNumber.png"),
             ),
           ),
           Expanded(
@@ -50,19 +46,13 @@ class _MyAppState extends State<MyApp> {
             child: FlatButton(
               onPressed: () {
                 setState(() {
-                  leftDiceNumber = Random().nextInt(6) + 1;
-                  rightDiceNumber = Random().nextInt(6) + 1;
                   // if(leftDiceNumber == rightDiceNumber) {
                   //   winningText = "You Won";
                   // }
                 });
               },
-              child: Image.asset("images/dice$rightDiceNumber.png"),
             ),
           ),
-          Expanded(
-            child: Text(winningText),
-          )
         ],
       )),
     );
