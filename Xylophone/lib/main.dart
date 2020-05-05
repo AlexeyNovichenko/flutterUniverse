@@ -1,14 +1,25 @@
 import "package:flutter/material.dart";
 import "package:audioplayers/audio_cache.dart";
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   void playSound(int soundNumber) {
     final sound = AudioCache();
     sound.play("note$soundNumber.wav");
+  }
+
+  Expanded buildKey({int playSoundNumber, MaterialColor color}) {
+    return Expanded(
+      child: FlatButton(
+        color: color,
+        padding: EdgeInsets.all(50.0),
+        onPressed: () {
+          playSound(playSoundNumber);
+        },
+        child: null,
+      ),
+    );
   }
 
   @override
@@ -23,49 +34,15 @@ class MyApp extends StatelessWidget {
         ),
         body: SafeArea(
             child: Column(
-          children: [
-            FlatButton(
-                color: Colors.red,
-                onPressed: () {
-                  playSound(1);
-                },
-                child: Text("1")),
-            FlatButton(
-                color: Colors.orange,
-                onPressed: () {
-                  playSound(2);
-                },
-                child: Text("2")),
-            FlatButton(
-                color: Colors.yellow,
-                onPressed: () {
-                  playSound(3);
-                },
-                child: Text("3")),
-            FlatButton(
-                color: Colors.green,
-                onPressed: () {
-                  playSound(4);
-                },
-                child: Text("4")),
-            FlatButton(
-                color: Colors.teal,
-                onPressed: () {
-                  playSound(5);
-                },
-                child: Text("5")),
-            FlatButton(
-                color: Colors.blue,
-                onPressed: () {
-                  playSound(6);
-                },
-                child: Text("6")),
-            FlatButton(
-                color: Colors.purple,
-                onPressed: () {
-                  playSound(7);
-                },
-                child: Text("7")),
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            buildKey(playSoundNumber: 1, color: Colors.red),
+            buildKey(playSoundNumber: 2, color: Colors.orange),
+            buildKey(playSoundNumber: 3, color: Colors.yellow),
+            buildKey(playSoundNumber: 4, color: Colors.teal),
+            buildKey(playSoundNumber: 5, color: Colors.green),
+            buildKey(playSoundNumber: 6, color: Colors.blue),
+            buildKey(playSoundNumber: 7, color: Colors.purple),
           ],
         )),
       ),
