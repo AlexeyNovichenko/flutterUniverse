@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Xylophone App"),
-          backgroundColor: Colors.lightBlueAccent,
+          title: Text("XYLOPHONE"),
+          backgroundColor: Colors.blueGrey
         ),
         body: SafeArea(
             child: Column(
